@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Celebrate Cambridge | Tickets</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="parallax">
+    <!-- navigation bar -->
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="tickets.html">Buy Tickets</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- embedded ticket sales -->
+    <div id="eventbrite-widget-container-345092550107"></div>
+
+    <script src="https://www.eventbrite.co.nz/static/widgets/eb_widgets.js"></script>
+    <script type="text/javascript">
+        var exampleCallback = function () {
+            console.log('Order complete!');
+        };
+
+        window.EBWidgets.createWidget({
+            // Required
+            widgetType: 'checkout',
+            eventId: '345092550107',
+            iframeContainerId: 'eventbrite-widget-container-345092550107',
+
+            // Optional
+            iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+            onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+        });
+    </script>
+</body>
+</html>
