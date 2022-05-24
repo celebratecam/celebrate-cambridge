@@ -88,17 +88,15 @@
 <body class="parallax" style="background-image: url('assets/img/molly-goodeve/molly-1-shaded.jpg');">
     <!-- navigation bar -->
     <div class="topnav">
-        <a href="index.html" style="flex: 25%; text-align: left; margin: 0 3%;">
-		<!-- <div>Celebrate<br />Cambridge</div> -->
-        </a>
-        <div style="flex: 50%; text-align: center; margin: 0 5%;">
+        <!-- <a href="index.html" style="flex: 25%; text-align: left; margin: 0 3%;">
+            <div>Celebrate<br />Cambridge</div>
+        </a> -->
+        <div style="flex: 50%; text-align: center; margin: 0 5%; margin-left: 30%">
             <a href="index.html">Home</a>
             <a class="active" href="about.html">About</a>
             <a href="mailto:ld@camhigh.school.nz">Contact</a>
         </div>
-        <a href="tickets.html" style="flex: 25%; text-align: right; margin: 0 3%;">
-            <div>Buy<br />Tickets</div>
-        </a>
+        <button style="flex: 15%; margin: 10px 5%;" class="medium" id="eventbrite-widget-modal-trigger-345092550107" type="button">Buy Tickets</button>
     </div>
 
     <!-- about section -->
@@ -205,5 +203,22 @@
         </section>
     </section>
 
+
+    <!-- Noscript content for added SEO -->
+    <noscript><a href="https://www.eventbrite.com/e/celebrate-cambridge-tickets-345092550107" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+    <script src="https://www.eventbrite.co.nz/static/widgets/eb_widgets.js"></script>
+    <script type="text/javascript">
+    var exampleCallback = function() {
+        console.log('Order complete!');
+    };
+
+    window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: '345092550107',
+        modal: true,
+        modalTriggerElementId: 'eventbrite-widget-modal-trigger-345092550107',
+        onOrderComplete: exampleCallback
+    });
+    </script>
 </body>
 </html>

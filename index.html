@@ -11,7 +11,7 @@
     <!-- navigation bar -->
     <div class="topnav">
         <a href="index.html" style="flex: 25%; text-align: left; margin: 0 3%;">
-		<!-- <div>Celebrate<br />Cambridge</div> -->
+            <!-- <div>Celebrate<br />Cambridge</div> -->
         </a>
         <div style="flex: 50%; text-align: center;">
             <a class="active" href="index.html">Home</a>
@@ -19,7 +19,7 @@
             <a href="mailto:ld@camhigh.school.nz">Contact</a>
         </div>
         <a href="tickets.html" style="flex: 25%; text-align: right; margin: 0 3%;">
-            <div>Buy<br />Tickets</div>
+            <!-- <div>Buy<br />Tickets</div> -->
         </a>
     </div>
 
@@ -29,10 +29,27 @@
             <div style="font-size: 138px; font-weight: bold;">Celebrate<br />Cambridge</div>
             <div style="font-size: 32px; margin: 5%">For Cambridge, by Cambridge</div>
             <button class="medium" onclick="location.href='about.html'">About</button>
-            <button class="medium" onclick="location.href='tickets.html'">Buy Tickets</button>
+            <button class="medium" id="eventbrite-widget-modal-trigger-345092550107" type="button">Buy Tickets</button>
         </div>
-
     </section>
 
+
+    <!-- embedded ticket sales -->
+    <!-- Noscript content for added SEO -->
+    <noscript><a href="https://www.eventbrite.com/e/celebrate-cambridge-tickets-345092550107" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+    <script src="https://www.eventbrite.co.nz/static/widgets/eb_widgets.js"></script>
+    <script type="text/javascript">
+        var exampleCallback = function () {
+            console.log('Order complete!');
+        };
+
+        window.EBWidgets.createWidget({
+            widgetType: 'checkout',
+            eventId: '345092550107',
+            modal: true,
+            modalTriggerElementId: 'eventbrite-widget-modal-trigger-345092550107',
+            onOrderComplete: exampleCallback
+        });
+    </script>
 </body>
 </html>
