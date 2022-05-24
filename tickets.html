@@ -10,7 +10,7 @@
     <!-- navigation bar -->
     <div class="topnav">
         <a href="index.html" style="flex: 25%; text-align: left; margin: 0 3%;">
-		<!-- <div>Celebrate<br />Cambridge</div> -->
+            <!-- <div>Celebrate<br />Cambridge</div> -->
         </a>
         <div style="flex: 50%; text-align: center;">
             <a href="index.html">Home</a>
@@ -23,23 +23,24 @@
     </div>
 
     <!-- embedded ticket sales -->
-    <div id="eventbrite-widget-container-345092550107"></div>
+    <!-- Noscript content for added SEO -->
+    <noscript><a href="https://www.eventbrite.com/e/celebrate-cambridge-tickets-345092550107" rel="noopener noreferrer" target="_blank">Buy Tickets on Eventbrite</a></noscript>
+    <!-- You can customize this button any way you like -->
+    <button id="eventbrite-widget-modal-trigger-345092550107" type="button">Buy Tickets</button>
 
     <script src="https://www.eventbrite.co.nz/static/widgets/eb_widgets.js"></script>
+
     <script type="text/javascript">
         var exampleCallback = function () {
             console.log('Order complete!');
         };
 
         window.EBWidgets.createWidget({
-            // Required
             widgetType: 'checkout',
             eventId: '345092550107',
-            iframeContainerId: 'eventbrite-widget-container-345092550107',
-
-            // Optional
-            iframeContainerHeight: 700,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
-            onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+            modal: true,
+            modalTriggerElementId: 'eventbrite-widget-modal-trigger-345092550107',
+            onOrderComplete: exampleCallback
         });
     </script>
 </body>
